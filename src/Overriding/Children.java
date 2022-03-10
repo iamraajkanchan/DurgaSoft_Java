@@ -1,8 +1,6 @@
 package Overriding;
 
-public class Children extends Parent {
+public abstract class Children extends Parent {
     @Override
-    public void marry() {
-        System.out.println("Ivy Fernandez");
-    }
+    public abstract void m1();
 }
