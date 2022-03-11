@@ -5,47 +5,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Children extends Parent {
+
+    /* You can't override a static method of Parent Class */
+    /*
     @Override
     public void m1() {
-        System.out.println("Child Class Method");
-    }
-
-    /* Prompts Compile Time Exception */
-    /*
-    @Override
-    public void m2() throws Exception {
-        System.out.println("Child Class Method that throws Exception");
+        System.out.println("Child Class Method with Static keyword");
     }
     */
 
-    @Override
-    public void m3() throws IOException {
-        System.out.println("Child Class Method that throws IOException");
-    }
-
-    /* Prompts Compile Time Exception */
+    /* You can't use static keyword on the method that you inherited from Parent Class */
     /*
     @Override
-    public void m4() throws Exception {
-        System.out.println("Child Class Method that throws Exception");
+    public static void m2() {
+        System.out.println("Child Class Method with Static Keyword");
     }
     */
-
-    @Override
-    public void m5() throws FileNotFoundException, EOFException {
-        System.out.println("Child Class Method that throws FileNotFoundException and EOFException");
-    }
-
-    /* Prompts Compile Time Exception */
-    /*
-    @Override
-    public void m6() throws EOFException, InterruptedException {
-        System.out.println("Child Class Method that throws EOFException");
-    }
-    */
-
-    @Override
-    public void m7() throws ArithmeticException, NullPointerException, ClassCastException {
-        System.out.println("Child Class Method that throws, ArithmeticException, NullPointerException, ClassCastException");
-    }
 }
