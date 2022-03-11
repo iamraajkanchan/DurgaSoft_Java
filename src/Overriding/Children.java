@@ -1,14 +1,9 @@
 package Overriding;
 
-import java.io.EOFException;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 public class Children extends Parent {
-    /* In the technique of Method Hiding, you can't use the annotation @Override */
-    // @Override
-    /* This is a class level method */
-    public static void m1() {
-        System.out.println("Child Class Method with Static keyword");
+    /* This is an example of Overloading but not Overriding */
+    /* This is an instance level method */
+    public void m1(int x) {
+        System.out.println("Child class method with int type argument.");
     }
 }
