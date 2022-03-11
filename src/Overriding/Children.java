@@ -36,10 +36,13 @@ public class Children extends Parent {
         System.out.println("Child Class Method that throws FileNotFoundException and EOFException");
     }
 
+    /* Prompts Compile Time Exception */
+    /*
     @Override
-    public void m6() throws EOFException {
+    public void m6() throws EOFException, InterruptedException {
         System.out.println("Child Class Method that throws EOFException");
     }
+    */
 
     @Override
     public void m7() throws ArithmeticException, NullPointerException, ClassCastException {
