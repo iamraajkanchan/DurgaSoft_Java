@@ -1,6 +1,8 @@
 package Overriding;
 
-public abstract class Children extends Parent {
+public class Children extends Parent {
     @Override
-    public abstract void m1();
+    public void m1() {
+        System.out.println("Implement Child Method");
+    }
 }
