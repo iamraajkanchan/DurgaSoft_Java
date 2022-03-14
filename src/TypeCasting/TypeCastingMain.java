@@ -87,12 +87,12 @@ class StaticA {
 
 class StaticB extends StaticA {
     public static void m1() {
-        System.out.println("Method of StaticB class");
+        System.out.println("Method of StaticB Class");
     }
 }
 
 class StaticC extends StaticB {
     public static void m1() {
-        System.out.println("Method of StaticC class");
+        System.out.println("Method of StaticC Class");
     }
 }
