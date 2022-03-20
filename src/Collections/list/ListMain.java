@@ -1,6 +1,7 @@
 package Collections.list;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.*;
 
 public class ListMain {
     public static void main(String[] args) {
@@ -15,5 +16,17 @@ public class ListMain {
         l.add(2, "M");
         l.add("N");
         System.out.println(l);
+
+        /* Here the below arrayList object is non-synchronized and is not Thread-Safe */
+        ArrayList arrayList = new ArrayList<>();
+        /* To attain Synchronized and Thread-Safe feature we are using the below code */
+        List list = Collections.synchronizedList(arrayList);
+        LinkedList linkedList = new LinkedList();
+        System.out.println(arrayList instanceof Serializable); // true
+        System.out.println(linkedList instanceof Serializable); // true
+        System.out.println(arrayList instanceof Cloneable); // true
+        System.out.println(linkedList instanceof Cloneable); // true
+        System.out.println(arrayList instanceof RandomAccess); // true
+        System.out.println(linkedList instanceof RandomAccess); // false
     }
 }
