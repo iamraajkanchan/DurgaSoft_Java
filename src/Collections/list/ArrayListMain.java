@@ -3,7 +3,7 @@ package Collections.list;
 import java.io.Serializable;
 import java.util.*;
 
-public class ListMain {
+public class ArrayListMain {
     public static void main(String[] args) {
         ArrayList l = new ArrayList();
         l.add("A");
