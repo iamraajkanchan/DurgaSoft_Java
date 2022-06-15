@@ -22,4 +22,9 @@ public abstract class Person {
     private boolean validateAge(int age) {
         return age > 3;
     }
+
+    /**
+     * Use this reference to create Abstract Factory pettern.
+     * https://www.geeksforgeeks.org/abstract-factory-pattern/
+     * */
 }
