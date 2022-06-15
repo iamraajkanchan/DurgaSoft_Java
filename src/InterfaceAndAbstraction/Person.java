@@ -24,7 +24,7 @@ public abstract class Person {
     }
 
     /**
-     * Use this reference to create Abstract Factory pettern.
+     * Use this reference to create Abstract Factory pattern.
      * https://www.geeksforgeeks.org/abstract-factory-pattern/
      * */
 }
