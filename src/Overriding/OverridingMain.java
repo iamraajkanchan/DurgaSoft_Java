@@ -1,12 +1,18 @@
 package Overriding;
 
+import java.util.*;
+
 public class OverridingMain {
     public static void main(String[] args) {
+
         Parent p = new Parent();
-        p.marry();
+        System.out.println(p.variable);
+
         Children c = new Children();
-        c.marry();
+        System.out.println(c.variable);
+
         Parent p1 = new Children();
-        p1.marry();
+        System.out.println(p1.variable);
+
     }
 }
