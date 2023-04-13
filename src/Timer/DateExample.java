@@ -5,14 +5,19 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class DateExample {
     public static void main(String... args) {
-        Calendar startCalendar = Calendar.getInstance();
-        System.out.println("Start Calendar : " + startCalendar.getTime());
-        Calendar endCalendar = Calendar.getInstance();
-        endCalendar.add(Calendar.DAY_OF_YEAR, -7);
-        System.out.println("End Calendar : " + endCalendar.getTime());
+        SimpleDateFormat sf = new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH);
+        Calendar fromCalendar = Calendar.getInstance();
+        fromCalendar.add(Calendar.DAY_OF_YEAR, -6);
+        String fromDate = sf.format(fromCalendar.getTime());
+        System.out.println("From Date: " + fromDate);
+        Calendar toCalendar = Calendar.getInstance();
+        String toDate = sf.format(toCalendar.getTime());
+        System.out.println("To Date: " + toDate);
+        setEnrollmentDate();
     }
 
     public static void getLastDate() {
@@ -49,5 +54,18 @@ public class DateExample {
         SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
         cal.add(Calendar.DAY_OF_YEAR, -7);
         return s.format(new Date(cal.getTimeInMillis()));
+    }
+
+    public static void setEnrollmentDate() {
+        String endDate = new SimpleDateFormat("dd-MM-yy").format(new Date());
+        String pattern = "dd-MM-yy";
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            Date dates = simpleDateFormat.parse(endDate);
+            String date = new SimpleDateFormat("MMMM d, yyyy").format(dates);
+            System.out.println(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
