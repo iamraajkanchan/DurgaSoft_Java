@@ -11,6 +11,8 @@ public class InheritanceMain {
         /* Because reference of Parent class can create object of child class but
          can't access properties and methods of child class */
         // doctor1.showDoctorClassName();
+        // So in order to call the method of Child class i.e. Doctor class you have to cast the doctor1 object
+        ((Doctor) doctor1).showDoctorClassName();
         Doctor doctor2 = new Doctor("Jane Perry", 24, 65000, "Seven Hospital");
         /* This below code is valid */
         /* Because object of child class can access properties and methods of parent class */

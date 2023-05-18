@@ -2,7 +2,6 @@ package Inheritance;
 
 public class Person {
     final private String name;
-
     final private int age;
     final private double salary;
 
