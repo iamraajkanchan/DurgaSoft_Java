@@ -1,4 +1,4 @@
-package Collections.lists;
+package Collections.list;
 
 public class AttendanceData {
     public static String ATTENDANCE_DATA = "[\n" +

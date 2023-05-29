@@ -1,9 +1,12 @@
-package Collections.lists;
+package Collections.list;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
+import java.util.Map;
+
+import static java.util.stream.Collectors.groupingBy;
 
 public class ListWithPojo {
     public static void main(String... args) {
@@ -17,10 +20,13 @@ public class ListWithPojo {
         try {
             TypeToken<List<AttendanceRecordItem>> token = new TypeToken<>() {
             };
-            List<AttendanceRecordItem> attendances = new Gson().fromJson(AttendanceData.ATTENDANCE_DATA, token);
-            for (AttendanceRecordItem attendance : attendances) {
-                System.out.println(attendance.getAddress());
+            List<AttendanceRecordItem> attendanceRecords = new Gson().fromJson(AttendanceData.ATTENDANCE_DATA, token);
+            for (AttendanceRecordItem attendance : attendanceRecords) {
+                System.out.println(attendance.getCheckIn());
             }
+            Map<String, List<AttendanceRecordItem>> groupedRecords = attendanceRecords.stream().collect(groupingBy(AttendanceRecordItem::getCheckIn));
+            groupedRecords.forEach((key, value) -> value.forEach(item -> System.out.println(item.getAddress())));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
