@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class DateExample {
     public static void main(String... args) {
@@ -17,7 +18,16 @@ public class DateExample {
         Calendar toCalendar = Calendar.getInstance();
         String toDate = sf.format(toCalendar.getTime());
         System.out.println("To Date: " + toDate);
+        System.out.println("===============================");
+        System.out.println("2 hours to Milliseconds.");
+        System.out.println(TimeUnit.HOURS.toMillis(2));
         setEnrollmentDate();
+        System.out.println("===============================");
+        System.out.println("Extracting Time From Response.");
+        System.out.println(extractTimeFromResponse("2023-05-18 17:52:06.072"));
+        System.out.println("===============================");
+        System.out.println("Extracting Day From Response.");
+        System.out.println(extractDayFromResponse("2023-05-18 17:52:06.072"));;
     }
 
     public static void getLastDate() {
@@ -67,5 +77,37 @@ public class DateExample {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String extractTimeFromResponse(String dateString) {
+        String currentDate = "";
+        if (dateString != "") {
+            try {
+                Date date = new SimpleDateFormat("yy-MM-dd hh:mm:ss.SSS", Locale.ENGLISH).parse(dateString);
+                SimpleDateFormat curr = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+                if (date != null) {
+                    currentDate = curr.format(date.getTime());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return currentDate;
+    }
+
+    public static String extractDayFromResponse(String dateString) {
+        String currentDate = "";
+        if (dateString != "") {
+            try {
+                Date date = new SimpleDateFormat("yy-MM-dd hh:mm:ss.SSS", Locale.ENGLISH).parse(dateString);
+                SimpleDateFormat curr = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
+                if (date != null) {
+                    currentDate = curr.format(date.getTime());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return currentDate;
     }
 }

@@ -18,7 +18,7 @@ public class InnerClassExample {
                 }
             }
 
-            public static class WifeDrawer {
+            public class WifeDrawer {
                 String taylor = "Taylor Swift";
 
                 void makeup() {

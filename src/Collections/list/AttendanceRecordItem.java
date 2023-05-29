@@ -1,4 +1,4 @@
-package Collections.lists;
+package Collections.list;
 
 import com.google.gson.annotations.SerializedName;
 
