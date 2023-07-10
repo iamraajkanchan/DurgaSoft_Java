@@ -1,4 +1,4 @@
-package InterfaceAndAbstraction;
+package intefaceAndAbstraction;
 
 public abstract class Person {
     final private String name;

@@ -1,4 +1,4 @@
-package Overloading;
+package overloading;
 
 class Animal {
 }

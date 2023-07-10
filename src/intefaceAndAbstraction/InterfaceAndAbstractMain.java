@@ -1,4 +1,4 @@
-package InterfaceAndAbstraction;
+package intefaceAndAbstraction;
 
 public class InterfaceAndAbstractMain {
     public static void main(String args[]) {

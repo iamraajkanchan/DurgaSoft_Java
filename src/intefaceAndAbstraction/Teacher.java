@@ -1,4 +1,4 @@
-package InterfaceAndAbstraction;
+package intefaceAndAbstraction;
 
 public class Teacher extends Person {
     final private String subject;

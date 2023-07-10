@@ -1,4 +1,4 @@
-package InterfaceAndAbstraction;
+package intefaceAndAbstraction;
 
 public interface Semester {
 

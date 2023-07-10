@@ -1,4 +1,4 @@
-package Overriding;
+package overriding;
 
 public abstract class Children extends Parent {
     @Override
