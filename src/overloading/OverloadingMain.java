@@ -1,4 +1,4 @@
-package Overloading;
+package overloading;
 
 public class OverloadingMain {
     public static void main(String[] args) {

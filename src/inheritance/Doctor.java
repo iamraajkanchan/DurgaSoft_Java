@@ -1,4 +1,4 @@
-package Inheritance;
+package inheritance;
 
 public class Doctor extends Person {
     final private String hospitalName;

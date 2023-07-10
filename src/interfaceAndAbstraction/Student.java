@@ -1,4 +1,4 @@
-package InterfaceAndAbstraction;
+package interfaceAndAbstraction;
 
 public class Student extends Person implements Semester {
     final private int rollNo;
