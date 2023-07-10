@@ -7,5 +7,7 @@ public class InnerClassSimulator {
         InnerClassExample.MyHome home = example.new MyHome();
         home.cook();
         InnerClassExample.MyHome.BrotherRoom.WifeDrawer drawer = new InnerClassExample.MyHome.BrotherRoom.WifeDrawer();
+        drawer.makeup();
+        drawer.clean();
     }
 }
