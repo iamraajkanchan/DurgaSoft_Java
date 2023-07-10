@@ -1,6 +1,6 @@
 package multiThreading.defogTech.threadLocal.unsafeThread;
 
-import multiThreading.defogTech.threadLocal.safeThread.ThreadLocalSimulator;
+import multiThreading.defogTech.threadLocal.StringDateSource;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,16 +13,17 @@ public class TwoUnsafeThreadsSimulator {
 
         new Thread(() -> {
             try {
-                Date birthDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse(ThreadLocalSimulator.getTimings()[0]);
+                Date birthDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse(StringDateSource.getTimings()[0]);
                 System.out.println(birthDate);
             } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
         }).start();
 
+
         new Thread(() -> {
             try {
-                Date birthDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse(ThreadLocalSimulator.getTimings()[1]);
+                Date birthDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse(StringDateSource.getTimings()[1]);
                 System.out.println(birthDate);
             } catch (ParseException e) {
                 throw new RuntimeException(e);
