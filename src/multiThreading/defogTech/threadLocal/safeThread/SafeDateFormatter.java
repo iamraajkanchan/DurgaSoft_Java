@@ -6,11 +6,12 @@ import java.util.Locale;
 public class SafeDateFormatter extends ThreadLocal<SimpleDateFormat> {
     @Override
     protected SimpleDateFormat initialValue() {
-        return new SimpleDateFormat("dd:MM:yy - HH:mm:ss", Locale.ENGLISH);
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
     }
 
     @Override
     public SimpleDateFormat get() {
         return super.get();
     }
+
 }
