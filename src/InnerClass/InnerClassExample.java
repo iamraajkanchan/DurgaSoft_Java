@@ -18,11 +18,16 @@ public class InnerClassExample {
                 }
             }
 
-            public class WifeDrawer {
-                String taylor = "Taylor Swift";
+            public static class WifeDrawer {
+                private final String drawerName = "MillerKnoll";
+                private final InnerClassExample instance = new InnerClassExample();
 
                 void makeup() {
-                    System.out.println(taylor + " is doing make up on a drawer");
+                    System.out.println(instance.a + " is doing make up on a " + drawerName + " drawer.");
+                }
+
+                void clean() {
+                    System.out.println(instance.a + " is cleaning " + drawerName + " drawer.");
                 }
 
             }

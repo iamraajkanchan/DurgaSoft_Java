@@ -6,6 +6,8 @@ public class InnerClassSimulator {
         System.out.println("Mirror Name " + example.new MyHome().new BrotherRoom().new WifeMirror().mirrorName);
         InnerClassExample.MyHome home = example.new MyHome();
         home.cook();
-        InnerClassExample.MyHome.BrotherRoom.WifeDrawer drawer = new InnerClassExample().new MyHome().new BrotherRoom().new WifeDrawer();
+        InnerClassExample.MyHome.BrotherRoom.WifeDrawer drawer = new InnerClassExample.MyHome.BrotherRoom.WifeDrawer();
+        drawer.makeup();
+        drawer.clean();
     }
 }
