@@ -1,12 +1,12 @@
-package multiThreading.packt.chapter1.printLogsWithThreadAttributes;
+package multiThreading.packt.chapter1.threadAttributesWithLogs;
 
 /**
  * Getting and setting thread information
  * */
-public class PrintLogsWithThreadAttributeCalculator implements Runnable {
+public class ThreadAttributeWithLogsCalculator implements Runnable {
     private final int number;
 
-    public PrintLogsWithThreadAttributeCalculator(int number) {
+    public ThreadAttributeWithLogsCalculator(int number) {
         this.number = number;
     }
 

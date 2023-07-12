@@ -2,6 +2,9 @@ package multiThreading.packt.chapter1.threadSleepResume;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Sleeping and resuming a thread
+ * */
 public class ThreadSleepResumeSimulator {
     public static void main(String... args) {
         ThreadSleepResumeFileClock fileClock = new ThreadSleepResumeFileClock();
