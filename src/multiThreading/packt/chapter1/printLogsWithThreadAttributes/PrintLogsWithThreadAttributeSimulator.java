@@ -1,17 +1,20 @@
-package multiThreading.packt.chapter1.basicsWithLogs;
+package multiThreading.packt.chapter1.printLogsWithThreadAttributes;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.concurrent.TimeUnit;
 
-public class BasicsWithLogsThreadSimulator {
+/**
+ * Getting and setting thread information
+ * */
+
+public class PrintLogsWithThreadAttributeSimulator {
     public static void main(String... args) {
         Thread[] threads = new Thread[10];
         Thread.State[] status = new Thread.State[10];
         for (int i = 0; i < 10; i++) {
-            threads[i] = new Thread(new BasicsWithLogsCalculator(i));
+            threads[i] = new Thread(new PrintLogsWithThreadAttributeCalculator(i));
             if (i % 2 == 0) {
                 threads[i].setPriority(Thread.MAX_PRIORITY);
             } else {

@@ -1,13 +1,14 @@
-package multiThreading.packt.chapter1.basics;
+package multiThreading.packt.chapter1.threadCreation;
 
-public class BasicsCalculator implements Runnable {
-
+/**
+ * Creating and running a thread
+ * */
+public class ThreadCreationCalculator implements Runnable {
     private final int number;
 
-    public BasicsCalculator(int number) {
+    public ThreadCreationCalculator(int number) {
         this.number = number;
     }
-
 
     @Override
     public void run() {
