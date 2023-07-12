@@ -3,6 +3,9 @@ package multiThreading.packt.chapter1.threadJoin;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Waiting for the finalization of a thread
+ * */
 public class ThreadJoinNetworkConnectionsLoader implements Runnable {
     @Override
     public void run() {

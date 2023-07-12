@@ -2,6 +2,9 @@ package multiThreading.packt.chapter1.threadJoin;
 
 import java.util.Date;
 
+/**
+ * Waiting for the finalization of a thread
+ * */
 public class ThreadJoinSimulator {
     public static void main(String... args) {
         ThreadJoinDataSourceLoader dataSourceLoader = new ThreadJoinDataSourceLoader();
