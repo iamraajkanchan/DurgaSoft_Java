@@ -7,10 +7,9 @@ import java.util.concurrent.TimeUnit;
  * Using local thread variables
  */
 public class ThreadLocalesUnsafeTask implements Runnable {
-    private Date startDate;
     @Override
     public void run() {
-        startDate = new Date();
+        Date startDate = new Date();
         System.out.printf("UnsafeTask: Starting Thread: %d : %s\n", Thread.currentThread().threadId(), startDate);
         try {
             TimeUnit.SECONDS.sleep((int) Math.rint(Math.random() * 10));
