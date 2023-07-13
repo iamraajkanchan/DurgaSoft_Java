@@ -1,5 +1,8 @@
 package multiThreading.packt.threadManagement.threadGroupException;
 
+/**
+ * Processing uncontrolled exceptions in a group of threads
+ * */
 public class ThreadGroupExceptionSimulator {
     public static void main(String... args) {
         final ThreadGroupExceptionThreadGroup threadGroup = new ThreadGroupExceptionThreadGroup("ThreadGroupExceptionThreadGroup");

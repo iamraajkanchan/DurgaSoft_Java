@@ -1,5 +1,8 @@
 package multiThreading.packt.threadManagement.threadGroupException;
 
+/**
+ * Processing uncontrolled exceptions in a group of threads
+ * */
 public class ThreadGroupExceptionThreadGroup extends ThreadGroup {
     /* You must override this constructor */
     public ThreadGroupExceptionThreadGroup(String name) {
