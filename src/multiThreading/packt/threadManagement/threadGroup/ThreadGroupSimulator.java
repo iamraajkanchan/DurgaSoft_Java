@@ -1,12 +1,15 @@
-package multiThreading.packt.threadManagement.threadGroups;
+package multiThreading.packt.threadManagement.threadGroup;
 
 import java.util.concurrent.TimeUnit;
 
-public class ThreadGroupsSimulator {
+/**
+ * Grouping threads into a group
+ * */
+public class ThreadGroupSimulator {
     public static void main(String... args) {
         final ThreadGroup threadGroup = new ThreadGroup("Searcher");
-        final ThreadGroupsResult result = new ThreadGroupsResult();
-        final ThreadGroupsSearchTask searchTask = new ThreadGroupsSearchTask(result);
+        final ThreadGroupResult result = new ThreadGroupResult();
+        final ThreadGroupSearchTask searchTask = new ThreadGroupSearchTask(result);
         for (int i = 0; i < 5; i++) {
             final Thread thread = new Thread(threadGroup, searchTask);
             thread.start();

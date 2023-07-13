@@ -1,6 +1,9 @@
-package multiThreading.packt.threadManagement.threadGroups;
+package multiThreading.packt.threadManagement.threadGroup;
 
-public class ThreadGroupsResult {
+/**
+ * Grouping threads into a group
+ * */
+public class ThreadGroupResult {
     private String name;
     public void setName(String name) {
         this.name = name;

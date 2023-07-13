@@ -1,12 +1,15 @@
-package multiThreading.packt.threadManagement.threadGroups;
+package multiThreading.packt.threadManagement.threadGroup;
 
 import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class ThreadGroupsSearchTask implements Runnable {
-    private final ThreadGroupsResult result;
-    public ThreadGroupsSearchTask(ThreadGroupsResult result) {
+/**
+ * Grouping threads into a group
+ * */
+public class ThreadGroupSearchTask implements Runnable {
+    private final ThreadGroupResult result;
+    public ThreadGroupSearchTask(ThreadGroupResult result) {
         this.result = result;
     }
     @Override
