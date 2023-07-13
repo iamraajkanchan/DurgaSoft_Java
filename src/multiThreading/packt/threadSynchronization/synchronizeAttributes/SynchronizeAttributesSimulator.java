@@ -3,7 +3,7 @@ package multiThreading.packt.threadSynchronization.synchronizeAttributes;
 /**
  * Arranging independent attributes in synchronized classes
  */
-public class SynchronizeAttributesSimulator<K, V> {
+public class SynchronizeAttributesSimulator {
     public static void main(String... args) {
         final SynchronizeAttributesCinema cinema = new SynchronizeAttributesCinema();
         final SynchronizeAttributesTicketOffice1 firstOffice = new SynchronizeAttributesTicketOffice1(cinema);
