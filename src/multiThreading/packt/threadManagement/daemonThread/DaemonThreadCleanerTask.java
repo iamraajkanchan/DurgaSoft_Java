@@ -13,6 +13,7 @@ public class DaemonThreadCleanerTask extends Thread {
         setDaemon(true);
         // Because you have to mark the thread as daemon by default that's why the class is extending the Thread class
     }
+    @SuppressWarnings("InfiniteLoopStatement")
     @Override
     public void run() {
         while(true) {

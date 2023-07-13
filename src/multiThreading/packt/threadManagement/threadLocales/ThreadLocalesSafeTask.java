@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  * Using local thread variables
  */
 public class ThreadLocalesSafeTask implements Runnable {
-    private ThreadLocal<Date> startDate = ThreadLocal.withInitial(Date::new);
+    private final ThreadLocal<Date> startDate = ThreadLocal.withInitial(Date::new);
 
     @Override
     public void run() {
