@@ -21,7 +21,7 @@ public class SynchronizeConditionEventStorage {
                 e.printStackTrace(System.out);
             }
             storage.offer(new Date());
-            System.out.printf("Set : %d", storage.size());
+            System.out.printf("Set: %d", storage.size());
             notifyAll();
         }
     }
@@ -32,7 +32,7 @@ public class SynchronizeConditionEventStorage {
             } catch (InterruptedException e) {
                 e.printStackTrace(System.out);
             }
-            System.out.printf("");
+            System.out.printf("Get: %d: %s", storage.size(), storage.poll());
             notifyAll();
         }
     }
