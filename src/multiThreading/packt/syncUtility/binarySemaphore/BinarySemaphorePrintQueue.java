@@ -9,7 +9,7 @@ public class BinarySemaphorePrintQueue {
     private final Semaphore semaphore;
 
     public BinarySemaphorePrintQueue() {
-        this.semaphore = new Semaphore(1);
+        this.semaphore = new Semaphore(1, false);
     }
 
     public void printJob(Object line) {
@@ -17,6 +17,7 @@ public class BinarySemaphorePrintQueue {
             semaphore.acquire();
             final long duration = (long) (Math.random() * 10);
             System.out.printf("PrintQueue - %s: printed %s at %d seconds\n", Thread.currentThread().getName(), line, duration);
+            Thread.sleep(duration);
         } catch (InterruptedException e) {
             e.printStackTrace(System.out);
         } finally {
