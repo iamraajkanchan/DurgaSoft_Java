@@ -10,8 +10,7 @@ public class SynchronizeConditionEventStorage {
     private final Queue<Date> storage;
     public SynchronizeConditionEventStorage() {
         this.maxSize = 10;
-        this.storage = new LinkedList<>() {
-        };
+        this.storage = new LinkedList<>();
     }
     public synchronized void set() {
         while(storage.size() == maxSize) {

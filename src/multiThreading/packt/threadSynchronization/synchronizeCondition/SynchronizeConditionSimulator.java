@@ -9,5 +9,11 @@ public class SynchronizeConditionSimulator {
         final Thread consumerThread = new Thread(consumer);
         producerThread.start();
         consumerThread.start();
+        try {
+            producerThread.join();
+            consumerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace(System.out);
+        }
     }
 }
