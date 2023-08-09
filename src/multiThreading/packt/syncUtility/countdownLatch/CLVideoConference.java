@@ -3,7 +3,7 @@ package multiThreading.packt.syncUtility.countdownLatch;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Add Chapter Name
+ * Waiting for multiple concurrent events
  * */
 public class CLVideoConference implements Runnable {
     private final CountDownLatch controller;
