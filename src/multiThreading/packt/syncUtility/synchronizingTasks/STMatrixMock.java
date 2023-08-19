@@ -14,7 +14,7 @@ public class STMatrixMock {
         final Random random = new Random();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                data[i][j] = random.nextInt();
+                data[i][j] = random.nextInt(10);
                 if (data[i][j] == number) {
                     counter++;
                 }
