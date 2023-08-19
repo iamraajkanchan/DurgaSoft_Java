@@ -1,10 +1,11 @@
 package multiThreading.packt.syncUtility.synchronizingTasks;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
  * Synchronizing tasks in a common point
- * */
+ */
 public class STSearcher implements Runnable {
     private final int firstRow;
     private final int lastRow;
@@ -34,8 +35,13 @@ public class STSearcher implements Runnable {
                     counter++;
                 }
             }
+            results.setData(i, counter);
+        }
+        System.out.printf("%s: Lines processed", Thread.currentThread().getName());
+        try {
+            barrier.await();
+        } catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace(System.out);
         }
     }
-
-    // Continue from page 100
 }
