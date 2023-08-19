@@ -117,6 +117,7 @@ public class DateExample {
         System.out.println("DateExample :: testDateFieldValues :: today : " + today);
         final Calendar todayCalendar = Calendar.getInstance();
         System.out.println("DateExample :: testDateFieldValues :: todayCalendar time : " + todayCalendar.getTime());
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar time in milliseconds : " + todayCalendar.getTimeInMillis());
         System.out.println("DateExample :: testDateFieldValues :: todayCalendar day of month : " + todayCalendar.get(Calendar.DAY_OF_MONTH));
         System.out.println("DateExample :: testDateFieldValues :: todayCalendar week of month : " + todayCalendar.get(Calendar.WEEK_OF_MONTH));
         System.out.println("DateExample :: testDateFieldValues :: todayCalendar day of week in month : " + todayCalendar.get(Calendar.DAY_OF_WEEK_IN_MONTH));
