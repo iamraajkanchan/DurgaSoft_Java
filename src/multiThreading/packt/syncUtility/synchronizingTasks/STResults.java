@@ -2,7 +2,7 @@ package multiThreading.packt.syncUtility.synchronizingTasks;
 
 /**
  * Synchronizing tasks in a common point
- * */
+ */
 public class STResults {
     private final int[] data;
 
