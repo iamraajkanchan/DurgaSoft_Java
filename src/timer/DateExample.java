@@ -27,7 +27,9 @@ public class DateExample {
         System.out.println(extractTimeFromResponse("2023-05-18 17:52:06.072"));
         System.out.println("===============================");
         System.out.println("Extracting Day From Response.");
-        System.out.println(extractDayFromResponse("2023-05-18 17:52:06.072"));;
+        System.out.println(extractDayFromResponse("2023-05-18 17:52:06.072"));
+        System.out.println("===============================");
+        testDateFieldValues();
     }
 
     public static void getLastDate() {
@@ -109,5 +111,17 @@ public class DateExample {
             }
         }
         return currentDate;
+    }
+    public static void testDateFieldValues() {
+        final long today = new Date().getTime();
+        System.out.println("DateExample :: testDateFieldValues :: today : " + today);
+        final Calendar todayCalendar = Calendar.getInstance();
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar time : " + todayCalendar.getTime());
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar day of month : " + todayCalendar.get(Calendar.DAY_OF_MONTH));
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar week of month : " + todayCalendar.get(Calendar.WEEK_OF_MONTH));
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar day of week in month : " + todayCalendar.get(Calendar.DAY_OF_WEEK_IN_MONTH));
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar month : " + todayCalendar.get(Calendar.MONTH));
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar day of year : " + todayCalendar.get(Calendar.DAY_OF_YEAR));
+        System.out.println("DateExample :: testDateFieldValues :: todayCalendar year : " + todayCalendar.get(Calendar.YEAR));
     }
 }
