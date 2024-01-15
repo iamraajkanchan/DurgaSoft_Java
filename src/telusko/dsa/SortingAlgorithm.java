@@ -11,9 +11,11 @@ public class SortingAlgorithm {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] numbers = Arrays.stream(reader.readLine().trim().split("\\s")).mapToInt(Integer::parseInt).toArray();
         bubbleSort(numbers);
+        System.out.println("===========================================");
+        selectionSort(numbers);
     }
 
-    public static void bubbleSort(int[] numbers) {
+    private static void bubbleSort(int[] numbers) {
         int temp = 0;
         int size = numbers.length;
         for (int i = 0; i < size; i++) {
@@ -25,6 +27,32 @@ public class SortingAlgorithm {
                 }
             }
         }
+        printArray(numbers);
+    }
+
+    public static void selectionSort(int[] numbers) {
+        int temp = 0;
+        int minIndex = -1;
+        int size = numbers.length;
+        for (int i = 0; i < size - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < size; j++) {
+                if (numbers[minIndex] > numbers[j]) {
+                    minIndex = j;
+                }
+            }
+            temp = numbers[minIndex];
+            numbers[minIndex] = numbers[i];
+            numbers[i] = temp;
+        }
+        printArray(numbers);
+    }
+
+    public static void insertionSort(int[] numbers) {
+
+    }
+
+    private static void printArray(int[] numbers) {
         StringBuilder builder = new StringBuilder();
         builder.append("[");
         for (int j = 0; j < numbers.length; j++) {
