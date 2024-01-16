@@ -12,9 +12,9 @@
  * Sorting Algorithms
  *  1. Bubble Sort - Time Complexity O(n^2)
  *  2. Selection Sort - Time Complexity O(n^2)
- *  3. Insertion Sort
- *  4. Merge Sort
- *  5. Quick Sort
+ *  3. Insertion Sort - Time Complexity O(n)
+ *  4. Quick Sort - Time Complexity O(nlogN)
+ *  5. Merge Sort
  *  6. Counting Sort
  *  7. Radix Sort
  *  8. Heap Sort

@@ -11,9 +11,11 @@ public class SortingAlgorithm {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] numbers = Arrays.stream(reader.readLine().trim().split("\\s")).mapToInt(Integer::parseInt).toArray();
-        sortNumbers(numbers, SortingAlgorithm::bubbleSort);
-        sortNumbers(numbers, SortingAlgorithm::selectionSort);
-        sortNumbers(numbers, SortingAlgorithm::insertionSort);
+        // sortNumbers(numbers, SortingAlgorithm::bubbleSort);
+        // sortNumbers(numbers, SortingAlgorithm::selectionSort);
+        // sortNumbers(numbers, SortingAlgorithm::insertionSort);
+        quickSort(numbers, 0, numbers.length - 1);
+        printArray("Quick Sort", numbers);
     }
 
     private static void bubbleSort(int[] numbers) {
@@ -31,7 +33,7 @@ public class SortingAlgorithm {
         printArray("Bubble Sort", numbers);
     }
 
-    public static void selectionSort(int[] numbers) {
+    private static void selectionSort(int[] numbers) {
         int temp = 0;
         int minIndex = -1;
         int size = numbers.length;
@@ -49,17 +51,44 @@ public class SortingAlgorithm {
         printArray("Selection Sort", numbers);
     }
 
-    public static void insertionSort(int[] numbers) {
+    private static void insertionSort(int[] numbers) {
         for (int i = 1; i < numbers.length; i++) {
             int key = numbers[i];
             int j = i - 1;
-            while (j > 0 && numbers[j] > key) {
+            while (j >= 0 && numbers[j] > key) {
                 numbers[j + 1] = numbers[j];
                 j--;
             }
             numbers[j + 1] = key;
         }
         printArray("Insertion Sort", numbers);
+    }
+
+    private static void quickSort(int[] numbers, int low, int high) {
+        if (low < high) {
+            int pi = partition(numbers, low, high);
+            quickSort(numbers, low, pi - 1);
+            quickSort(numbers, pi + 1, high);
+        }
+    }
+
+    private static int partition(int[] numbers, int low, int high) {
+        int pivot = numbers[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (numbers[j] < pivot) {
+                i++;
+                int temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
+
+        int temp = numbers[i + 1];
+        numbers[i + 1] = numbers[high];
+        numbers[high] = temp;
+        return i + 1;
     }
 
     private static void sortNumbers(int[] numbers, SortingTask task) {
@@ -70,15 +99,14 @@ public class SortingAlgorithm {
     private static void printArray(String sortMethod, int[] numbers) {
         System.out.println(sortMethod);
         StringBuilder builder = new StringBuilder();
-        // builder.append("[");
+        builder.append("[");
         for (int j = 0; j < numbers.length; j++) {
             builder.append(numbers[j]);
-            builder.append(" ");
             if (j != numbers.length - 1) {
-                // builder.append(",");
+                builder.append(",");
             }
         }
-        // builder.append("]");
+        builder.append("]");
         System.out.println(builder);
     }
 }
