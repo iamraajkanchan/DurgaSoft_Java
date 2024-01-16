@@ -6,13 +6,14 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 // 6 5 2 8 9 4
+// 38	55	55	97	89	45	39	14	28	82	47	63	13	56	90	63	15	16	17	63	54	44	96	27	91	73	70	60	49	41	39	82	59	67	15	62	70	48	99	36	34	45	89	23	91	2	83	1	39	87	80	72	62	69	36	29	31	61	12	14	43	38	50	66	51	51	38	69	55	0	48	51	40	79	53	47	99	69	71	2	66	82	88	31	8	39	43	24	66	92	21	37	18	46	43	62	88	87	20
 public class SortingAlgorithm {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] numbers = Arrays.stream(reader.readLine().trim().split("\\s")).mapToInt(Integer::parseInt).toArray();
-        bubbleSort(numbers);
-        System.out.println("===========================================");
-        selectionSort(numbers);
+        sortNumbers(numbers, SortingAlgorithm::bubbleSort);
+        sortNumbers(numbers, SortingAlgorithm::selectionSort);
+        sortNumbers(numbers, SortingAlgorithm::insertionSort);
     }
 
     private static void bubbleSort(int[] numbers) {
@@ -27,7 +28,7 @@ public class SortingAlgorithm {
                 }
             }
         }
-        printArray(numbers);
+        printArray("Bubble Sort", numbers);
     }
 
     public static void selectionSort(int[] numbers) {
@@ -45,23 +46,39 @@ public class SortingAlgorithm {
             numbers[minIndex] = numbers[i];
             numbers[i] = temp;
         }
-        printArray(numbers);
+        printArray("Selection Sort", numbers);
     }
 
     public static void insertionSort(int[] numbers) {
-
+        for (int i = 1; i < numbers.length; i++) {
+            int key = numbers[i];
+            int j = i - 1;
+            while (j > 0 && numbers[j] > key) {
+                numbers[j + 1] = numbers[j];
+                j--;
+            }
+            numbers[j + 1] = key;
+        }
+        printArray("Insertion Sort", numbers);
     }
 
-    private static void printArray(int[] numbers) {
+    private static void sortNumbers(int[] numbers, SortingTask task) {
+        Thread thread = new Thread(() -> task.runTask(numbers));
+        thread.start();
+    }
+
+    private static void printArray(String sortMethod, int[] numbers) {
+        System.out.println(sortMethod);
         StringBuilder builder = new StringBuilder();
-        builder.append("[");
+        // builder.append("[");
         for (int j = 0; j < numbers.length; j++) {
             builder.append(numbers[j]);
+            builder.append(" ");
             if (j != numbers.length - 1) {
-                builder.append(",");
+                // builder.append(",");
             }
         }
-        builder.append("]");
+        // builder.append("]");
         System.out.println(builder);
     }
 }

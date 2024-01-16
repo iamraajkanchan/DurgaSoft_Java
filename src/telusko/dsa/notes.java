@@ -6,12 +6,12 @@
  * Time complexity -Functional algorithm that takes less time.
  * Space complexity - Functional algorithm that takes less memory
  * Searching Algorithms
- *  1. Linear Search
- *  2. Binary Search
+ *  1. Linear Search - Time Complexity O(n)
+ *  2. Binary Search - Time Complexity O(logN)
  *  3. Binary Search with Recursion
  * Sorting Algorithms
- *  1. Bubble Sort
- *  2. Selection Sort
+ *  1. Bubble Sort - Time Complexity O(n^2)
+ *  2. Selection Sort - Time Complexity O(n^2)
  *  3. Insertion Sort
  *  4. Merge Sort
  *  5. Quick Sort
