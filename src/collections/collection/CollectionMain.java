@@ -26,9 +26,7 @@ public class CollectionMain {
         mutants.addAll(superHero);
         mutants.addAll(superHeroine);
 
-        mutants.forEach(hero -> {
-            System.out.println(hero);
-        });
+        mutants.forEach(System.out::println);
         System.out.println("=========================");
         mutants.remove("Iron Man");
         /* This is lambda expression */
