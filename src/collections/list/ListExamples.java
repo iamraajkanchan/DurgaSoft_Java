@@ -8,7 +8,7 @@ public class ListExamples {
         linkedListExample();
         arrayListExample();
         vectorExample();
-        flatMapExample();
+        stackExample();
     }
 
     private static void linkedListExample() {
@@ -30,6 +30,7 @@ public class ListExamples {
     }
 
     /**
+     * Vector
      * Flexible - Vectors can grow as needed to accommodate new elements
      * Thread Safe - Vectors are thread safe. They can be easily accessed by multiple threads.
      * Caution - Vectors are slow as compared to ArrayList because of their thread-safety mechanisms.
@@ -47,11 +48,50 @@ public class ListExamples {
     private static void vectorExample() {
         Vector<Integer> numberVector = new Vector<>();
         populateList(numberVector);
-        List<Integer> reversedList = numberVector.reversed();
         System.out.println("Example of Vector");
         numberVector.stream().map(e -> e + " ").forEach(System.out::print);
         System.out.println();
+        List<Integer> reversedList = numberVector.reversed();
         reversedList.stream().map(e -> e + " ").forEach(System.out::print);
+        System.out.println();
+    }
+
+    /**
+     * Stack
+     * Follows - Stack follows LIFO Order (Last In and First Out) means last element added will be removed first.
+     * Use Case - Stacks are used for Backtracking algorithms to explore different solutions.
+     * Popular Methods
+     * add(Object o)
+     * add(int index, Object o)
+     * push(Object o)
+     * get(int index)
+     * getFirst()
+     * getLast()
+     * pop()
+     * peek()
+     * isEmpty()
+     * size()
+     * set(int index, Object o)
+     * setElement(Object o, int index)
+     * remove(int index)
+     * remove(Object o)
+     * removeFirst()
+     * removeLast()
+     * removeAll()
+     * */
+    private static void stackExample() {
+        Stack<Integer> numberStack = new Stack<>();
+        populateList(numberStack);
+        System.out.println("Example of Stack");
+        numberStack.parallelStream().map(e -> e + " ").forEach(System.out::print);
+        System.out.println();
+        int numberPopped = numberStack.pop();
+        System.out.println("Number Popped: " + numberPopped);
+        numberStack.parallelStream().map(e -> e + " ").forEach(System.out::print);
+        int numberPeeked = numberStack.peek();
+        System.out.println();
+        System.out.println("Number Peeked: " + numberPeeked);
+        numberStack.parallelStream().map(e -> e + " ").forEach(System.out::print);
         System.out.println();
     }
 
