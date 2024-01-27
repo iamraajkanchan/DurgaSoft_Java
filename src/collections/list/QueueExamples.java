@@ -38,7 +38,7 @@ public class QueueExamples {
     }
 
     /**
-     * Queue
+     * ArrayDeque
      * Follows - It follows FIFO (First In and First Out) means first element added will be removed first.
      * Addition - Elements will be added at the rear end of the queue and will be removed at the front end of the queue.
      * Ordered - Insertion order will be maintained.
