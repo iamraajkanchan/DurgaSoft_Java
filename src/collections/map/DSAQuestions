@@ -1,0 +1,60 @@
+## DSA Questions based on IdentityHashMap
+
+**Basic:**
+
+1. **Explain the difference between using `equals` and object identity for key comparison in IdentityHashMap vs. HashMap.**
+2. **Implement a method to find the number of distinct objects in an IdentityHashMap.**
+3. **Write a function to check if two IdentityHashMaps contain the same set of objects, regardless of their values.**
+4. **Given an IdentityHashMap where keys are objects and values are strings, return a new IdentityHashMap where the keys are the class names of the original keys and the values are the corresponding objects.**
+5. **Explain why iterating over an IdentityHashMap might not be consistent across different runs of the same program.**
+
+**Intermediate:**
+
+1. **Design a data structure using an IdentityHashMap that efficiently stores students and their corresponding attendance records for a course. Implement methods to find the students with the highest and lowest attendance, the average attendance for the class, and the students who never attended a session.**
+2. **Develop an algorithm to remove all duplicate objects from an IdentityHashMap while maintaining the order of insertion.**
+3. **Construct a cache using an IdentityHashMap to store recently accessed objects. Implement methods to retrieve cached objects, put new objects in the cache, and handle cache eviction based on size or access time.**
+4. **Implement a method to find the longest chain of references in an IdentityHashMap where each value in the chain is a key for another entry in the map.**
+5. **Explain the potential performance implications of using IdentityHashMap in a multithreaded environment.**
+
+**Advanced:**
+
+1. **Modify the IdentityHashMap implementation to allow for custom hash functions for object identity based on specific criteria.**
+2. **Design a data structure using an IdentityHashMap that efficiently stores employees and their corresponding projects. Implement methods to find the employees working on the same projects, the projects with the most shared employees, and the average number of shared projects per employee.**
+3. **Solve the "object graph isomorphism problem" using an IdentityHashMap to check if two object graphs are structurally identical, regardless of their values.**
+4. **Implement a dynamic range predecessor/successor query (PDS) data structure using an IdentityHashMap that efficiently supports queries to find the previous/next object within a given range of indices.**
+5. **Analyze the time and space complexity of performing common operations on an IdentityHashMap compared to a HashMap.**
+
+These are just a few examples, and you can certainly design more complex and challenging questions based on specific scenarios and applications. Remember to consider the unique behavior of IdentityHashMap and its focus on object identity when formulating your questions.
+
+
+
+
+## DSA Questions based on TreeMap:
+
+**Basic:**
+
+1. **Implement a method to find the element with the closest key to a given target key in a TreeMap.**
+2. **Write a function to count the number of elements within a specific range of keys in a TreeMap.**
+3. **Reverse the order of elements in a TreeMap.**
+4. **Given a TreeMap where keys are strings and values are integers, return a new TreeMap where the keys are the individual characters of the original keys and the values are the counts of their occurrences.**
+5. **Implement a method to print all leaf nodes in a TreeMap.**
+
+**Intermediate:**
+
+1. **Design a data structure using a TreeMap that efficiently stores student names and their corresponding course grades. Implement methods to find the student with the highest grade, the average grade for a specific course, and all students who passed a certain course with a minimum grade.**
+2. **Develop an algorithm to find the k largest elements in a TreeMap based on their values.**
+3. **Construct a frequency map using a TreeMap to count the occurrences of words in a large text file. Find the top 10 most frequent words.**
+4. **Implement a range query for a TreeMap that efficiently retrieves all elements within a given range of keys.**
+5. **Given a TreeMap with overlapping key ranges, find all pairs of keys that have overlapping ranges.**
+
+**Advanced:**
+
+1. **Modify the TreeMap implementation to allow for custom comparison functions for ordering keys based on specific criteria.**
+2. **Design a data structure using a TreeMap that efficiently stores employee information and their corresponding projects. Implement methods to find the employees working on the most projects, the projects with the most employees, and the average number of projects per employee.**
+3. **Solve the "skyline problem" using a TreeMap to find the visible edges of a set of buildings.**
+4. **Implement a dynamic range minimum/maximum query (RMQ) data structure using a TreeMap that efficiently supports queries to find the minimum/maximum element within a given range of indices.**
+5. **Balance a binary search tree using rotations while maintaining the properties of a TreeMap.**
+
+Remember to consider the complexity of your solutions and utilize the strengths of TreeMaps, such as sorted order and efficient navigation methods, to solve these problems effectively.
+
+
